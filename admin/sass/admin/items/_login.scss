@@ -1,0 +1,47 @@
+
+//** ------------ style of login ---------
+main{
+     
+    width:100%;
+    height:auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    div{
+        width: 100%;
+        h1{
+            width: $width2;
+            margin: auto;
+            text-align: center;
+            color: $main_color100;
+        }
+    }
+    form{
+            width: $width1;
+            margin:40px  auto auto auto;
+            text-align: center;
+            padding: 40px 10px;
+            border: 1px solid $gray;
+            background-color: $white;
+            color: $main_color100;
+            @include circle(10px);
+            input[type="email"],input[type="password"]{
+                width: 90%;
+                margin-bottom: 20px;
+                padding: 20px 6px;
+                @include circle(20px);
+                border: 1px solid $main_color;
+                outline:none;
+            }
+            input[type="submit"]{
+                margin-bottom: 20px;
+                padding: 10px 20px;
+                @include circle(10px);
+                border: none;
+                outline: none;
+                cursor: pointer;
+                background-color: $color_aside;
+            }
+    }
+}

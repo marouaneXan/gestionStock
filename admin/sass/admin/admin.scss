@@ -1,0 +1,219 @@
+@import"../variables/vars";
+@import "../variables/butttons";
+@import "../extends/extend_style";
+@import "items/login";
+@import "items/dashboard";
+@import "items/produit";
+@import "items/ajouterProduit";
+@import "items/statistic";
+
+
+*{
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: $backgound_main;
+    overflow: scroll;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+// .searchProduct{
+//     padding:20px 0px 0px 0px;
+//       width: 87%;
+//       margin:auto;
+//       background-color:#F7F8FA;
+//   }
+//   .searchProduct input{
+//      padding:8px;
+//      width:30%;
+//      border-radius:10px;
+//      border:1px solid #d5dce7;
+//      outline:none;
+//   }
+//   .produit_content{
+//      margin-top: -20px !important;
+//   }
+
+
+
+
+//** ------------ style of dashbord ---------
+
+
+
+header{
+    width: 100%;
+    height:60px;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e9;
+    display: flex;
+    padding: 6px 20px;
+    background-color: $backgound_main;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 22222222222222222;
+
+    .toggle-menu{
+        display: none;
+    }
+    img{
+        @include circle(50%);
+        cursor: pointer;
+    }
+    button{
+        color: $main_color100;
+        padding: 0px 20px;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        a{
+            color: $color_aside;
+            text-decoration: none;
+        }
+    }
+
+}
+
+.content_dashboard{
+     .title{
+         width: 100vw;
+     }
+}
+
+
+.page{
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    overflow: hidden;
+
+    .content{
+        height: 100%;
+        width: 80%;
+        margin-left: 20%;
+        }
+
+        aside{
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0%;
+        border-right: 1px solid #EDEFF2;
+        height: 100%;
+        width: 20%;
+        background-color:$color_aside;
+        h1{
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 30px;
+            a{
+                text-decoration: none;
+                color: $main_color;
+            }
+            
+        }
+    }
+    nav{
+        width: 100%;
+        display: inline-block;
+        padding-top: 30px;
+        ul{
+            width: 100%;
+            display: inline-block;
+            align-items: center;
+            li{
+                list-style-type: none;
+                width: 90%;
+                margin:10px auto;
+                padding: 10px;
+                white-space: nowrap;
+                &:hover{
+                    margin-left: 20px;
+                    transition: all .5s;
+                }
+
+                a{
+                    color: #212529;
+                    text-decoration: none;
+                    margin-left: 10px;
+                    font-size: 20px;
+                    font-weight: bolder;
+                    cursor: pointer;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+.action-produit{
+    width: 420px;
+    background-color:$color_aside;
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index: 222222222222222222222222222222222222222;
+    transform:translate(-50%,-50%);
+    padding:20px;
+    border-radius:10px;
+    color:white;
+    input{
+        float:right;
+        padding:10px;
+        margin:5px;
+        border-radius:10px;
+        border:none;
+        outline:none;
+        color:white;
+        cursor:pointer;
+    }
+}
+
+
+
+// **------------------- responsive with width 1120px --------------------
+
+@media screen and(max-width:1120px){
+
+    header{
+        .our-logo{
+            display: none;
+        }
+        .toggle-menu{
+            display: block;
+        }
+    }
+   
+    .page{
+
+        .content{
+            width: 100%;
+            margin-left: 0%;
+            overflow: scroll;
+            }
+
+            aside{
+            width: 50%;
+            display: none;
+        }
+    
+    } 
+
+}
+

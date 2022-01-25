@@ -1,0 +1,75 @@
+
+
+.searchProduct{
+    padding:20px 0px 0px 0px;
+    width: 87%;
+    margin:auto;
+    background-color:#F7F8FA;
+    input,select{
+        padding:8px;
+        width:30%;
+        border-radius:10px;
+        border:1px solid #d5dce7;
+        outline:none;
+     }
+ }
+
+
+
+
+
+.produit_content{
+    width: 100%;
+    margin-top: 10px;
+    padding: 40px 20px 10px 20px;
+    margin-top: -20px !important;
+    table{
+        background-color: $white;
+        width: 90%;
+        margin: auto;
+        @include table_border();
+        th,td{
+            @include table_border();
+            text-align: center;
+            padding: 10px;
+        }
+        th{
+           background-color:  $color_content_title;
+        }
+        .message{
+            text-align: left !important;
+        }
+        td{
+            button{
+              @include buttons();
+            }
+            a{
+                cursor: pointer;
+            }
+        }
+       
+        
+    }
+
+    .pagination{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        nav{
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: $black;
+                border: 1px solid $gray;
+                padding: 10px 13px;
+                @include circle(20px);
+                margin: 4px;
+
+            }
+           
+        }
+    }
+}
